@@ -1,0 +1,43 @@
+$estilos:(
+  tfuente: uppercase,
+  pfuente: bold,
+
+
+);
+
+
+/*CONTACTO */
+.formulario{
+    margin-top: 80px;
+  }
+.campo {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin: 10px auto;
+  }
+  //MIXIN
+@mixin color ($color, $background-color) {
+    padding: 10px;
+    color:$color;
+    background-color:$background-color;
+  }
+.boton_s {
+    @include color(black,#d3e4cd){
+      text-transform:map-get($estilos, tfuente);
+      font-weight:map-get($estilos , pfuente);
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      margin-left: 800px;
+     }
+  }
+.boton_r {
+    @include color(black,#d3e4cd){
+    text-transform:map-get($estilos, tfuente);
+    font-weight:map-get($estilos , pfuente);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    }
+  }
